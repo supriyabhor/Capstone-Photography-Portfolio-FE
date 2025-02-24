@@ -52,7 +52,8 @@ export default function BookingFormComponent({ onAddBooking, onEditBooking, book
       onAddBooking(bookingForm);
       navigate("/booking");
     }
-    resetForm(); // Call the resetForm function
+   resetForm(); // Call the resetForm function
+  
   }
 
 
@@ -77,7 +78,7 @@ export default function BookingFormComponent({ onAddBooking, onEditBooking, book
       <label> Event Time: </label>
         <input type="text" name="eventTime" value={bookingForm.eventTime} onChange={handleChange} />
          <br />
-         
+
       <button type="submit">{editing ? "Save Changes" : "Book Event"}</button>
     </form>
   );

@@ -1,11 +1,30 @@
-export default function PhotographerForm() {
+export default function PhotographerForm({onAddPhotographer}) {
+    
+   async function handleSubmit(e) {
+        e.preventDefault();
+        const newPhotograper = {
+            name: e.target.name.value,
+            email: e.target.email.value,
+            phone: e.target.phone.value,
+            bio: e.target.bio.value,
+            portfolioURL: e.target.portfolioURL.value,
+        };
+       
+        if (typeof onAddPhotographer === 'function') {
+            onAddPhotographer(newPhotograper);
+          } else {
+            console.error('onAddPhotographer is not a function');
+          }
 
+        console.log(newPhotograper);
+        e.target.reset(); //clear the form field
+    }
     
 
     return(
         <>
-          <form >
-            <label > Name:  </label>
+          <form onSubmit={handleSubmit} >
+            <label > Name: </label>
                <input type="text" name="name" /> <br />  
             
             <label > Email: </label>
@@ -18,7 +37,7 @@ export default function PhotographerForm() {
               <textarea name="bio" ></textarea> <br />
             
             <label > Portfolio URL: </label>
-               <input type="url" name="portfolioUrl" /> <br />
+               <input type="url" name="portfolioURL" /> <br />
 
             <button type="submit"> Submit </button>   
           </form>

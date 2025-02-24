@@ -49,6 +49,7 @@ export default function BookingForm() {
     function handleShowData() {
         setShowData(true);
     }
+    
     function handleEdit(booking) {
     setSelectedBooking(booking);
   }

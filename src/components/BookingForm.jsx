@@ -14,7 +14,8 @@ export default function BookingFormComponent({ onAddBooking, onEditBooking, book
   });
 
   useEffect(() => {
-    if (booking && booking._id) {
+    console.log(booking);
+    if (booking && booking.name) {
       setBookingForm({
         name: booking.name || "",
         email: booking.email || "",

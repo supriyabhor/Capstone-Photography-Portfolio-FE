@@ -61,6 +61,7 @@ export default function BookingForm() {
     }
 
     function handleEdit(booking) {
+        console.log(booking);
     setSelectedBooking(booking);
   }
 
@@ -68,15 +69,13 @@ export default function BookingForm() {
         <>
           <h2> Booking your Event here....</h2>
           
-            {selectedBooking && selectedBooking._id ? (
+            
         <BookingFormComponent
           onAddBooking={handleAddBooking}
           onEditBooking={handleEditBooking}
           booking={selectedBooking}
         />
-      ) : (
-        <BookingFormComponent onAddBooking={handleAddBooking} />
-      )}
+       
          
           <button onClick={handleShowData}> Show All Bookings </button>
          {showData && (

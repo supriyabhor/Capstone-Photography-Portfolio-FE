@@ -15,7 +15,7 @@ export default function PhotographerForm() {
 
     return(
         <>
-          <h1> Photographer Portpholio</h1>
+          <h1> Photographer Portfolio</h1>
         </>
     );
 }

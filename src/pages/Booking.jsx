@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import BookingFormComponent from "../components/BookingForm";
 import { useNavigate } from "react-router-dom";
 
-export default function BookingForm() {
+export default function BookingPage() {
     const navigate = useNavigate();
     const [ booking, setBooking ] = useState([]);
     const [ loading, setLoding] = useState(true);

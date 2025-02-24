@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect } from "react";
+import PhotographerForm from "../components/PhotographerForm";
 
-export default function PhotographerForm() {
+export default function PhotographerPage() {
 
     useEffect(() => {
         async function getPhotographerData() {
@@ -13,9 +14,12 @@ export default function PhotographerForm() {
 
     }, [])
 
+
+
     return(
         <>
           <h1> Photographer Portfolio</h1>
+          <PhotographerForm />
         </>
     );
 }

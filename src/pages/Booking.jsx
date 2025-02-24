@@ -35,6 +35,7 @@ export default function BookingForm() {
 
     async function handleEditBooking(id, updateBooking) {
         try {
+            console.log("Data Updated Successfully...");
           const res = await axios.put(`http://localhost:3000/booking/${id}`, updateBooking);
           const updatedBookingList = booking.map((booking) => (booking._id === id ? res.data : booking));
           setBooking(updatedBookingList);
@@ -44,12 +45,21 @@ export default function BookingForm() {
         }
       }
 
-
+    async function handleDeleteBooking(id) {
+        try {
+            console.log("Data is Deleted...");
+            const res = await axios.delete(`http://localhost:3000/booking/${id}`);
+            setBooking(booking.filter((booking) => booking._id !== id));
+            console.log(res.data);
+        } catch (err) {
+            console.error(err);
+        }
+    }
 
     function handleShowData() {
         setShowData(true);
     }
-    
+
     function handleEdit(booking) {
     setSelectedBooking(booking);
   }
@@ -68,7 +78,7 @@ export default function BookingForm() {
         <BookingFormComponent onAddBooking={handleAddBooking} />
       )}
          
-          <button onClick={handleShowData}>Show All Bookings</button>
+          <button onClick={handleShowData}> Show All Bookings </button>
          {showData && (
             <div>
          { loading ? (
@@ -83,8 +93,7 @@ export default function BookingForm() {
                         <p>Event Date: {el.enentDate}</p>
                         <p>Event Time: {el.eventTime}</p>
                         <button onClick={() => handleEdit(el)}>Edit</button>
-                       <button>delete</button>
-
+                        <button onClick={() => handleDeleteBooking(el._id)}>Delete</button>
                     </div>
                 )
               })

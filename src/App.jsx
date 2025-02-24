@@ -11,9 +11,9 @@ function App() {
   return (
     <>
        <nav>
-        <Link to= {'/'} > Home </Link> |    |
-        <Link to= {'/Booking'} > Booking Event</Link> |    |
-        <Link to= {'/Photographer'} > Create Portpholio</Link>
+        <Link to= {'/'} >  Home  </Link> |      |
+        <Link to= {'/booking'} >  Booking Event  </Link> |       |
+        <Link to= {'/Photographer'} >  Create Portfolio  </Link>
        </nav>
 
        <Routes>

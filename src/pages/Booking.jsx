@@ -44,16 +44,6 @@ export default function BookingForm() {
         }
       }
 
-//    async function handleEditBooking(id, updateBooking) {
-//         try {
-//             const res =await axios.put(`http://localhost:3000/booking/${id}`, updateBooking);
-//             const updateBookingList = booking.map((booking) => (booking._id === id ? res.data : booking));
-//             setBooking(updateBookingList);
-//             console.log(res.data);
-//         } catch (err) {
-//             console.error(err);
-//         }
-//    }
 
 
     function handleShowData() {
@@ -67,9 +57,6 @@ export default function BookingForm() {
         <>
           <h2> Booking your Event here....</h2>
           
-          {/* <BookingFormComponent
-           onAddBooking={handleAddBooking}  
-         /> */}
             {selectedBooking && selectedBooking._id ? (
         <BookingFormComponent
           onAddBooking={handleAddBooking}

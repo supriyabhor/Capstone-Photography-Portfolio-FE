@@ -55,7 +55,6 @@ export default function BookingFormComponent({ onAddBooking, onEditBooking, book
   }
 
 
-
   return (
     <form onSubmit={handleSubmit}>
       <label>

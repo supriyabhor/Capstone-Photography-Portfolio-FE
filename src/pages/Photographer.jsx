@@ -19,7 +19,11 @@ export default function PhotographerPage() {
     async function handleAddPhotographer(newPhotograper) {
         try{
         let res = await axios.post('http://localhost:3000/photographer', newPhotograper);
-        setPhotographer([...photographer, newPhotograper]);
+        const newPhotograperId = res.data._id;  // retrive the _id of the newly created booking
+        setPhotographer([...photographer, {...newPhotograper, _id: newPhotograperId}]);
+
+        // setPhotographer([...photographer, newPhotograper]);
+        
         } catch (err) {
             console.error(err);
           

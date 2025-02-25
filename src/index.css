@@ -1,4 +1,9 @@
 :root {
+  body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG9ObyuoJ2VqbCimI00HyVLXbAI2JKQCjU-dWdFu5IVyNbPlqg09JGiZY7TumIW-Vny8g&usqp=CAU);
+    background-size: cover;
+}
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -12,6 +17,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 a {
   font-weight: 500;

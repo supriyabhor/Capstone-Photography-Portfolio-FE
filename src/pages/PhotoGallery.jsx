@@ -6,7 +6,9 @@ export default function PhotoGallery() {
 
   useEffect(() => {
     async function getPhotoData() {
+        console.log('Getting photo data...');
       let res = await axios.get('http://localhost:3000/photo');
+      console.log(res.data);
       setPhotos(res.data); // Update the state with the received data
     }
     getPhotoData();
@@ -15,13 +17,13 @@ export default function PhotoGallery() {
   return (
     <>
       <h1>Photo Gallery</h1>
-      <ul>
-        {photos.map((photo, index) => (
-          <li key={index}>
-            <img src={photo.photoURI} alt="Photo" />
-          </li>
-        ))}
-      </ul>
+
+      <div className="photo-gallery">
+         {photos.map((photo, index) => (
+            <img key={index} src={photo.photoURL} alt="Photo" />
+         ))}
+      </div>
+
     </>
   );
 }

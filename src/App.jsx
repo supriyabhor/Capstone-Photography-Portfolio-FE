@@ -15,7 +15,6 @@ function App() {
        <nav>
         <Link to= {'/'} >  Home  </Link> |      |
         <Link to= {'/booking'} >  Booking Event  </Link> |       |
-        <Link to= {'/PhotoGallery'} >  Photo Gallery  </Link> |  |
         <Link to ={'/LoginPage'} >  Login </Link>
        </nav>
 

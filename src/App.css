@@ -56,7 +56,16 @@ button{
   margin-top: 10px;
 }
 
-img{
-  width: 500px;
-  
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.photo-gallery img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
 }

@@ -16,7 +16,6 @@ export default function BookingPage() {
             let res = await axios.get('http://localhost:3000/booking');
             setBooking(res.data);
             setLoding(false);
-
             console.log(res.data);
         }
         getBookingData(); 
@@ -26,7 +25,10 @@ export default function BookingPage() {
     async function handleAddBooking(newBooking) {
         try {
             const res =await axios.post('http://localhost:3000/booking', newBooking);
-            setBooking([...booking, newBooking]);
+            const newBookingId = res.data._id; // Retrieve the _id of the newly created booking
+            setBooking([...booking, { ...newBooking, _id: newBookingId }]);
+            
+           // setBooking([...booking,  newBooking]);
             console.log(res.data);
         } catch (err) {
             console.error(err);
@@ -57,7 +59,7 @@ export default function BookingPage() {
     }
 
     function handleShowData() {
-        setShowData(true);
+        setShowData(!showData);  //Toggle showData
     }
 
     function handleEdit(booking) {
@@ -77,7 +79,7 @@ export default function BookingPage() {
         />
        
          
-          <button onClick={handleShowData}> Show All Bookings </button>
+       <button onClick={handleShowData}> {showData ? 'Hide All Bookings' : 'Show All Bookings'} </button>
          {showData && (
             <div>
          { loading ? (

@@ -22,11 +22,11 @@ export default function PhotographerPage() {
         setPhotographer([...photographer, newPhotograper]);
         } catch (err) {
             console.error(err);
-            alert('Error adding photographer: ' + err.message);
+          
         }
     }
 
-    
+
 
     return(
         <>

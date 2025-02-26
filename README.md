@@ -1,14 +1,14 @@
-# APPLICATION TITLE - 
-Photography Portfolio Application
+
+# Photography Portfolio Application
 
 * A web application to manage bookings, photographer details, and photos for an event or portfolio.
 
 ## Images which used in my application-
-  # LOGO img - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE/blob/master/src/assets/Logo.svg
-  
+  ## LOGO img - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE/blob/master/src/assets/Logo.svg
+  ## Background img - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE/blob/master/src/assets/BackgroundImages.jpg
 
 ## Description
-*This is a Photography Portfolio application that allows users to do-
+This is a Photography Portfolio application that allows users to do-
 - Book Photography Sessions. Can update ,delete the details.
 - showcase all Booked sessions.
 - Browse a photo gallery.
@@ -42,18 +42,18 @@ Photography Portfolio Application
 *  It uses MongoDB for data storage and mongoose for data modeling. 
 
 ## Environment Variables
-     * MONGODB_URI= (The connection string for your MongoDB instance.)
-     * CLOUDINARY_API_KEY: Your Cloudinary API key
-     * CLOUDINARY_API_SECRET: Your Cloudinary API secret
+* MONGODB_URI= (The connection string for your MongoDB instance.)
+* CLOUDINARY_API_KEY: Your Cloudinary API key
+* CLOUDINARY_API_SECRET: Your Cloudinary API secret
 
 ## Dependancies- 
-  # Frontend- axios, react, react-router-dom
-  # Backend- express, dotenv, nodemon, mongoose, cloudinary
+  ### Frontend- axios, react, react-router-dom
+  ### Backend- express, dotenv, nodemon, mongoose, cloudinary
 
 ## For backend - Base URL: http://localhost:3000/  
 
 ## API Documentation
-  #Endpoints
+  ## Endpoints
     - GET /bookings: Retrieve all bookings
     - POST /bookings: Create a new booking
     - PUT / booking: Update the Booking data
@@ -79,12 +79,12 @@ Photography Portfolio Application
 
 
 ## The repository Link:
-   # FrontEnd - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE
-   # BackEnd - https://github.com/supriyabhor/Capstone-Photography-Portfolio-BE
+   ### FrontEnd - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE
+   ### BackEnd - https://github.com/supriyabhor/Capstone-Photography-Portfolio-BE
 
-## <a name="Supriya"></a>About The Author
+## About The Author
 I build applications and mini projects tied to my various interests. I look for creative solutions to real world problems and think of technical ways to address them. While no application is ever perfect I find joy in the process and all my final products!
  
- # LinkedIn- https://www.linkedin.com/in/supriya-bhor/
+ ## LinkedIn- https://www.linkedin.com/in/supriya-bhor/
  
 

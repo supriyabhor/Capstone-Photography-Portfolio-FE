@@ -56,29 +56,23 @@ export default function BookingFormComponent({ onAddBooking, onEditBooking, book
   
   }
 
-
   return (
-    <form onSubmit={handleSubmit}>
-      <label> Name:  </label>
-         <input type="text" name="name" value={bookingForm.name} onChange={handleChange} />
-       <br />
-
-      <label>  Email:   </label>
-         <input type="email" name="email" value={bookingForm.email} onChange={handleChange} />
-        <br />
-
-      <label> Location: </label>
-        <input type="text" name="location" value={bookingForm.location} onChange={handleChange} />
+    <form className="booking-form" onSubmit={handleSubmit}>
+      <label> Name: </label>
+      <input type="text" name="name" value={bookingForm.name} onChange={handleChange} />
       <br />
-
-      <label> Event Date:   </label>
-         <input type="date" name="eventDate" value={bookingForm.eventDate} onChange={handleChange} />
-        <br />
-
+      <label> Email: </label>
+      <input type="email" name="email" value={bookingForm.email} onChange={handleChange} />
+      <br />
+      <label> Location: </label>
+      <input type="text" name="location" value={bookingForm.location} onChange={handleChange} />
+      <br />
+      <label> Event Date: </label>
+      <input type="date" name="eventDate" value={bookingForm.eventDate} onChange={handleChange} />
+      <br />
       <label> Event Time: </label>
-        <input type="text" name="eventTime" value={bookingForm.eventTime} onChange={handleChange} />
-         <br />
-
+      <input type="text" name="eventTime" value={bookingForm.eventTime} onChange={handleChange} />
+      <br />
       <button type="submit">{editing ? "Save Changes" : "Book Event"}</button>
     </form>
   );

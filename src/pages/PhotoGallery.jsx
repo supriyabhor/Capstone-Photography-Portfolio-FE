@@ -17,7 +17,7 @@ export default function PhotoGallery() {
   return (
     <>
       <h1>Photo Gallery</h1>
-
+      
       <div className="photo-gallery">
          {photos.map((photo, index) => (
             <img key={index} src={photo.photoURL} alt="Photo" />

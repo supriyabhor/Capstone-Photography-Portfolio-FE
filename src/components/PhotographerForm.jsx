@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function PhotographerForm({onAddPhotographer}) {
+      const nav = useNavigate();
     
    async function handleSubmit(e) {
         e.preventDefault();
@@ -18,12 +21,15 @@ export default function PhotographerForm({onAddPhotographer}) {
 
         console.log(newPhotograper);
         e.target.reset(); //clear the form field
+
+         // Navigate to a different page
+        nav('/'); // Replace with the desired page
     }
     
 
     return(
         <>
-          <form onSubmit={handleSubmit} >
+          <form className="user-form" onSubmit={handleSubmit} >
             <label > Name: </label>
                <input type="text" name="name" /> <br />  
             

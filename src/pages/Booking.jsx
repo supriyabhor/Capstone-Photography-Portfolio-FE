@@ -9,8 +9,8 @@ export default function BookingPage() {
     const [ loading, setLoding] = useState(true);
     const [showData, setShowData] = useState(false);
     const [ selectedBooking, setSelectedBooking] = useState({});
-   
   
+
     useEffect(() => {
     async function getBookingData() {
             let res = await axios.get('http://localhost:3000/booking');
@@ -65,6 +65,8 @@ export default function BookingPage() {
     function handleEdit(booking) {
         console.log(booking);
     setSelectedBooking(booking);
+
+
   }
 
     return(
@@ -87,15 +89,16 @@ export default function BookingPage() {
          ) : (
             booking.map((el, i) => {
                 return(
-                    <div key={el._id || i}>
-                        <h3>{el.name}</h3>
-                        <p>Email: {el.email}</p>
-                        <p>Location: {el.location}</p>
-                        <p>Event Date: {el.enentDate}</p>
-                        <p>Event Time: {el.eventTime}</p>
-                        <button onClick={() => handleEdit(el)}>Edit</button>
-                        <button onClick={() => handleDeleteBooking(el._id)}>Delete</button>
-                    </div>
+                  <div className="booking-data" key={el._id || i}>
+                  <h3>{el.name}</h3>
+                  <p>Email: {el.email}</p>
+                  <p>Location: {el.location}</p>
+                  <p>Event Date: {el.eventDate}</p>
+                  <p>Event Time: {el.eventTime}</p>
+                  <button onClick={() => handleEdit(el)}>Edit</button>
+                
+                  <button onClick={() => handleDeleteBooking(el._id)}>Delete</button>
+                </div>
                 )
               })
             )}

@@ -97,10 +97,9 @@ button{
 
   /* Booking Form */
   .booking-form {
-    width: 70%;
-    margin: 20px;
-    padding: 20px;
-    margin-left: 40px;
+    width: 30%;
+    margin: 10px auto; /* Add auto to margin */
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -161,10 +160,9 @@ button{
 
   /* Login form */
   .login-form {
-    width: 70%;
-    margin: 20px;
-    padding: 20px;
-    margin-left: 40px;
+    width: 15%;
+    margin: 10px auto; /* Add auto to margin */
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -200,10 +198,9 @@ button{
 
   /* Photographer form */
   .user-form {
-    width: 70%;
-    margin: 20px;
-    padding: 20px;
-    margin-left: 40px;
+    width: 30%;
+    margin: 10px auto; /* Add auto to margin */
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

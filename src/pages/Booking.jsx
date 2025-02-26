@@ -82,10 +82,12 @@ export default function BookingPage() {
        
          
        <button onClick={handleShowData}> {showData ? 'Hide All Bookings' : 'Show All Bookings'} </button>
+       
          {showData && (
             <div>
          { loading ? (
             <p>Loading..</p>
+            
          ) : (
             booking.map((el, i) => {
                 return(

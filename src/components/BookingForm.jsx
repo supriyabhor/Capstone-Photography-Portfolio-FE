@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 export default function BookingFormComponent({ onAddBooking, onEditBooking, booking }) {
   const navigate = useNavigate();
   const [editing, setEditing] = useState(false);
+ 
+
   const [bookingForm, setBookingForm] = useState({
     name: "",
     email: "",
@@ -32,6 +34,8 @@ export default function BookingFormComponent({ onAddBooking, onEditBooking, book
     setBookingForm({ ...bookingForm, [name]: value });
   }
 
+ 
+
   function resetForm() {
     setBookingForm({
       name: "",
@@ -55,6 +59,8 @@ export default function BookingFormComponent({ onAddBooking, onEditBooking, book
    resetForm(); // Call the resetForm function
   
   }
+
+  
 
   return (
     <form className="booking-form" onSubmit={handleSubmit}>

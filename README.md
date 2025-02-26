@@ -4,8 +4,8 @@
 * A web application to manage bookings, photographer details, and photos for an event or portfolio.
 
 ## Images which used in my application-
-  ## LOGO img - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE/blob/master/src/assets/Logo.svg
-  ## Background img - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE/blob/master/src/assets/BackgroundImages.jpg
+  ### LOGO img - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE/blob/master/src/assets/Logo.svg
+  ### Background img - https://github.com/supriyabhor/Capstone-Photography-Portfolio-FE/blob/master/src/assets/BackgroundImages.jpg
 
 ## Description
 This is a Photography Portfolio application that allows users to do-
